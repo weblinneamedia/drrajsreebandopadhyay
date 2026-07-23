@@ -40,6 +40,7 @@ export const doctor = {
   bioExtended: `Dr. Bandyopadhyay combines surgical precision with a deeply patient-centred approach. He believes in clear communication, evidence-based treatment planning, and comprehensive support throughout every stage of care — from initial consultation through recovery and long-term follow-up.`,
   qualifications: [
     "MDS — Oral & Maxillofacial Surgery",
+    "Diploma in Oral Oncology (AO Foundation, Switzerland)",
     "Specialisation in Oral Oncology & Head-Neck Reconstruction",
     "Advanced training in Microvascular Free Flap Reconstruction",
   ],
