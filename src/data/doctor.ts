@@ -22,7 +22,7 @@ export const doctor = {
   mapLink: "https://maps.google.com/?q=Kolkata,West+Bengal,India",
   parkingInfo:
     "Convenient parking available near the clinic. Landmark details will be shared upon appointment confirmation.",
-  website: "https://drrajarshimaxillofacial.com",
+  website: "https://drrajarshimaxillofacial.in",
   images: {
     hero: "/images/doctor-hero.png",
     about: "/images/doctor-about.png",
