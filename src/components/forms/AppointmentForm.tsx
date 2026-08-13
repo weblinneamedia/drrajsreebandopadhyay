@@ -202,9 +202,11 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
             className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:border-accent bg-white"
           >
             <option value="">Select time</option>
-            <option value="morning">Morning (10 AM – 12 PM)</option>
-            <option value="afternoon">Afternoon (12 PM – 3 PM)</option>
-            <option value="evening">Evening (3 PM – 6 PM)</option>
+            <option value="15:00">3:00 PM</option>
+            <option value="15:30">3:30 PM</option>
+            <option value="16:00">4:00 PM</option>
+            <option value="16:30">4:30 PM</option>
+            <option value="17:00">5:00 PM</option>
           </select>
         </div>
         <div className="md:col-span-2">

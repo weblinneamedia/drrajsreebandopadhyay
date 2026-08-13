@@ -38,7 +38,7 @@ export function medicalClinicSchema() {
     telephone: doctor.phone,
     email: doctor.email,
     url: siteConfig.url,
-    openingHours: "Mo-Sa 10:00-18:00",
+    openingHours: "Mo-Sa 15:00-17:00",
     address: {
       "@type": "PostalAddress",
       addressLocality: doctor.location.city,
@@ -84,8 +84,8 @@ export function localBusinessSchema() {
           "Friday",
           "Saturday",
         ],
-        opens: "10:00",
-        closes: "18:00",
+        opens: "15:00",
+        closes: "17:00",
       },
     ],
   };
