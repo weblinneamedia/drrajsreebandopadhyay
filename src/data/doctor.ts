@@ -13,9 +13,9 @@ export const doctor = {
   phone: "+91 81599 28326",
   phoneHref: "tel:+918159928326",
   whatsappHref: "https://wa.me/918159928326",
-  email: "Contact@drrajarshimaxillofacial.com",
+  email: "drrajarshimaxillofacial@gmail.com",
   clinicName: "Dr. Rajarshi Bandyopadhyay — Oral & Maxillofacial Clinic",
-  clinicTiming: "Monday – Saturday: 3:00 PM – 5:00 PM",
+  clinicTiming: "Monday – Saturday: 10:00 AM – 6:00 PM",
   address: "Kolkata, West Bengal, India",
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0!2d88.3639!3d22.5726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM0JzIxLjQiTiA4OMKwMjEnNTAuMCJF!5e0!3m2!1sen!2sin!4v1",
@@ -30,7 +30,6 @@ export const doctor = {
   social: {
     facebook: "https://www.facebook.com/drrajarshibandopadhyay",
     instagram: "https://www.instagram.com/dr.rbandopadhyay/",
-    linkedin: "https://linkedin.com/",
     youtube: "https://youtube.com/",
   },
   analyticsId: process.env.NEXT_PUBLIC_GA_ID ?? "",

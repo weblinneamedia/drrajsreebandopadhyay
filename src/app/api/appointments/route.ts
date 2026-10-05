@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { saveAppointment, sendEmailNotification } from "@/lib/appointments";
+import { saveAppointment } from "@/lib/appointments";
 
 export async function POST(request: NextRequest) {
   try {
@@ -30,8 +30,6 @@ export async function POST(request: NextRequest) {
       message: message || "",
       consent,
     });
-
-    await sendEmailNotification(submission);
 
     return NextResponse.json({ success: true, id: submission.id });
   } catch {

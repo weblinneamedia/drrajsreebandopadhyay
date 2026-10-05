@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
+import { doctor } from "@/data/doctor";
 import { treatments } from "@/data/treatments";
 
 interface FormData {
@@ -66,6 +67,39 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
       if (!res.ok) {
         const data = await res.json();
         throw new Error(data.error || "Submission failed");
+      }
+
+      const mailRes = await fetch(
+        `https://formsubmit.co/ajax/${encodeURIComponent(doctor.email)}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: form.name,
+            email: form.email,
+            phone: form.phone,
+            patientType: form.patientType,
+            preferredDate: form.preferredDate,
+            preferredTime: form.preferredTime,
+            treatment: form.treatment,
+            message: form.message,
+            _replyto: form.email || undefined,
+            _subject: `Appointment enquiry from ${form.name}`,
+            _template: "table",
+            _captcha: "false",
+          }),
+        }
+      );
+      const mailData = (await mailRes.json().catch(() => null)) as {
+        success?: string;
+        message?: string;
+      } | null;
+      const needsActivation = /activation/i.test(mailData?.message ?? "");
+      if ((!mailRes.ok || mailData?.success === "false") && !needsActivation) {
+        throw new Error(mailData?.message || "Could not email this enquiry.");
       }
 
       setStatus("success");
@@ -202,11 +236,23 @@ export function AppointmentForm({ compact = false }: { compact?: boolean }) {
             className="w-full px-4 py-2.5 border border-slate-200 rounded-lg focus:border-accent bg-white"
           >
             <option value="">Select time</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="10:30">10:30 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="11:30">11:30 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="12:30">12:30 PM</option>
+            <option value="13:00">1:00 PM</option>
+            <option value="13:30">1:30 PM</option>
+            <option value="14:00">2:00 PM</option>
+            <option value="14:30">2:30 PM</option>
             <option value="15:00">3:00 PM</option>
             <option value="15:30">3:30 PM</option>
             <option value="16:00">4:00 PM</option>
             <option value="16:30">4:30 PM</option>
             <option value="17:00">5:00 PM</option>
+            <option value="17:30">5:30 PM</option>
+            <option value="18:00">6:00 PM</option>
           </select>
         </div>
         <div className="md:col-span-2">
