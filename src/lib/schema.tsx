@@ -15,9 +15,11 @@ export function physicianSchema() {
     url: siteConfig.url,
     address: {
       "@type": "PostalAddress",
-      addressLocality: doctor.location.city,
-      addressRegion: doctor.location.state,
-      addressCountry: doctor.location.country,
+      streetAddress: doctor.address.street,
+      addressLocality: doctor.address.locality,
+      addressRegion: doctor.address.region,
+      postalCode: doctor.address.postalCode,
+      addressCountry: doctor.address.country,
     },
     areaServed: doctor.location.city,
     knowsAbout: [
@@ -41,14 +43,16 @@ export function medicalClinicSchema() {
     openingHours: "Mo-Sa 10:00-18:00",
     address: {
       "@type": "PostalAddress",
-      addressLocality: doctor.location.city,
-      addressRegion: doctor.location.state,
-      addressCountry: doctor.location.country,
+      streetAddress: doctor.address.street,
+      addressLocality: doctor.address.locality,
+      addressRegion: doctor.address.region,
+      postalCode: doctor.address.postalCode,
+      addressCountry: doctor.address.country,
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 22.5726,
-      longitude: 88.3639,
+      latitude: 22.5804599,
+      longitude: 88.3319128,
     },
     physician: {
       "@type": "Physician",
@@ -69,9 +73,11 @@ export function localBusinessSchema() {
     url: siteConfig.url,
     address: {
       "@type": "PostalAddress",
-      addressLocality: doctor.location.city,
-      addressRegion: doctor.location.state,
-      addressCountry: doctor.location.country,
+      streetAddress: doctor.address.street,
+      addressLocality: doctor.address.locality,
+      addressRegion: doctor.address.region,
+      postalCode: doctor.address.postalCode,
+      addressCountry: doctor.address.country,
     },
     openingHoursSpecification: [
       {

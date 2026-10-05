@@ -133,7 +133,13 @@ export function Footer() {
             <ul className="space-y-3.5 text-sm text-slate-300">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 mt-0.5 text-accent-light shrink-0" />
-                <span>{doctor.address}</span>
+                <span>
+                  {doctor.address.name}
+                  <br />
+                  {doctor.address.street}
+                  <br />
+                  {doctor.address.locality}, {doctor.address.region} {doctor.address.postalCode}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent-light shrink-0" />

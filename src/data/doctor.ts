@@ -16,12 +16,18 @@ export const doctor = {
   email: "drrajarshimaxillofacial@gmail.com",
   clinicName: "Dr. Rajarshi Bandyopadhyay — Oral & Maxillofacial Clinic",
   clinicTiming: "Monday – Saturday: 10:00 AM – 6:00 PM",
-  address: "Kolkata, West Bengal, India",
+  address: {
+    name: "Linnea Health",
+    street: "43, G.T. Road (South)",
+    locality: "Howrah",
+    region: "West Bengal",
+    postalCode: "711101",
+    country: "India",
+  },
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0!2d88.3639!3d22.5726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM0JzIxLjQiTiA4OMKwMjEnNTAuMCJF!5e0!3m2!1sen!2sin!4v1",
-  mapLink: "https://maps.google.com/?q=Kolkata,West+Bengal,India",
-  parkingInfo:
-    "Convenient parking available near the clinic. Landmark details will be shared upon appointment confirmation.",
+    "https://maps.google.com/maps?q=Linnea+Health,+43,+G.T.+Road+(South),+Howrah,+West+Bengal+711101&z=17&output=embed",
+  mapLink:
+    "https://www.google.com/maps/search/?api=1&query=Linnea+Health,+43,+G.T.+Road+(South),+Howrah,+West+Bengal+711101",
   website: "https://drrajarshimaxillofacial.in",
   images: {
     hero: "/images/doctor-hero.png",
