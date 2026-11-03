@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { TopBar, Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -72,6 +71,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
       <head>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-8160992981781209"
+        />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8160992981781209"
+          crossOrigin="anonymous"
+        />
         <link rel="icon" href="/images/logo.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/images/logo.png" type="image/png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
@@ -89,12 +97,6 @@ export default function RootLayout({
         <CookieConsent />
         {doctor.analyticsId && <Analytics analyticsId={doctor.analyticsId} />}
       </body>
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8160992981781209"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
     </html>
   );
 }
