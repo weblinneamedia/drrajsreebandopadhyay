@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, Clock, MessageCircle, AlertTriangle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { doctor } from "@/data/doctor";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { AppointmentForm } from "@/components/forms/AppointmentForm";
@@ -34,8 +34,11 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium text-navy">Address</p>
-                      <p className="text-slate-600">{doctor.address}</p>
-                      <p className="text-sm text-slate-500 mt-1">{doctor.parkingInfo}</p>
+                      <p className="text-slate-600">{doctor.address.name}</p>
+                      <p className="text-slate-600">{doctor.address.street}</p>
+                      <p className="text-slate-600">
+                        {doctor.address.locality}, {doctor.address.region} {doctor.address.postalCode}
+                      </p>
                     </div>
                   </li>
                   <li className="flex items-center gap-3">
@@ -88,26 +91,6 @@ export default function ContactPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Clinic location on Google Maps"
                 />
-              </div>
-
-              <div className="card p-6 bg-red-50 border border-red-100">
-                <div className="flex items-start gap-3">
-                  <AlertTriangle className="w-6 h-6 text-red-600 shrink-0" />
-                  <div>
-                    <h3 className="font-bold text-navy mb-2">Emergency Information</h3>
-                    <p className="text-sm text-slate-600 mb-3">
-                      For urgent oral or facial trauma, call{" "}
-                      <a
-                        href={doctor.phoneHref}
-                        className="text-red-600 font-semibold hover:underline"
-                      >
-                        {doctor.phone}
-                      </a>
-                      . For life-threatening emergencies, contact local emergency services
-                      (102/108) immediately.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 

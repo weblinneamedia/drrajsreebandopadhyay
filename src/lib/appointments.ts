@@ -50,15 +50,3 @@ export async function saveAppointment(
 
   return submission;
 }
-
-export async function sendEmailNotification(
-  submission: AppointmentSubmission
-): Promise<void> {
-  const notificationEmail = process.env.APPOINTMENT_NOTIFICATION_EMAIL;
-  if (!notificationEmail) return;
-
-  // Placeholder for email integration (Resend, SendGrid, Nodemailer, etc.)
-  console.log(
-    `[Appointment Notification] New enquiry from ${submission.name} (${submission.phone}) → ${notificationEmail}`
-  );
-}

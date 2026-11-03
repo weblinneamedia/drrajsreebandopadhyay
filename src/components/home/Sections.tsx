@@ -65,12 +65,12 @@ export function FeaturedTreatment() {
             </Button>
           </div>
 
-          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl bg-white">
             <Image
-              src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=600&fit=crop"
-              alt="Advanced oral oncology care and treatment"
+              src="/images/clinic-equipment.png"
+              alt="Advanced dental CBCT and panoramic imaging equipment at the clinic"
               fill
-              className="object-cover"
+              className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>

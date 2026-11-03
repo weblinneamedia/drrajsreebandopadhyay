@@ -30,21 +30,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL("https://drrajarshimaxillofacial.in"),
   title: {
-    default: `${doctor.name} | ${doctor.title} in ${doctor.location.city}`,
-    template: `%s | ${doctor.shortName}`,
+    default: "Dr Rajarshi Maxillofacial",
+    template: "%s | Dr Rajarshi Maxillofacial",
   },
-  description: siteConfig.description,
+  description: "Oral and Maxillofacial Surgeon in Kolkata",
   keywords: siteConfig.keywords,
   authors: [{ name: doctor.name }],
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: siteConfig.url,
-    siteName: doctor.clinicName,
-    title: `${doctor.name} | ${doctor.title}`,
-    description: siteConfig.description,
+    url: "https://drrajarshimaxillofacial.in",
+    siteName: "Dr Rajarshi Maxillofacial",
+    title: "Dr Rajarshi Maxillofacial",
+    description: "Oral and Maxillofacial Surgeon in Kolkata",
   },
   robots: {
     index: true,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: siteConfig.url,
+    canonical: "/",
   },
   icons: {
     icon: [
